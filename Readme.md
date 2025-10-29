@@ -51,22 +51,68 @@
 
 Структура проекта
 masato-rental-system/
-├── backend/
-│   ├── controllers/     # Логика обработки запросов
-│   ├── middleware/      # JWT аутентификация
-│   ├── routes/          # Маршруты API
-│   ├── utils/           # Генерация PDF, утилиты
-│   └── server.js        # Точка входа
-├── frontend/
-│   ├── src/
-│   │   ├── components/  # React компоненты
-│   │   ├── pages/       # Страницы приложения
-│   │   ├── context/     # Auth контекст
-│   │   └── App.js       # Главный компонент
-│   └── public/
-├── database/
-│   └── schema.sql       # Структура БД
-└── README.md
+├── 📁 backend/
+│   ├── 📁 controllers/
+│   │   ├── adminController.js
+│   │   ├── authController.js
+│   │   ├── paymentController.js
+│   │   ├── requestController.js
+│   │   └── roomController.js
+│   ├── 📁 middleware/
+│   │   ├── adminMiddleware.js
+│   │   └── authMiddleware.js
+│   ├── 📁 routes/
+│   │   ├── adminRoutes.js
+│   │   ├── authRoutes.js
+│   │   ├── contractRoutes.js
+│   │   ├── notificationRoutes.js
+│   │   ├── paymentRoutes.js
+│   │   ├── requestRoutes.js
+│   │   ├── roomRoutes.js
+│   │   └── userRoutes.js
+│   ├── 📁 utils/
+│   │   ├── generateContract.js
+│   │   └── generateTaxReport.js
+│   ├── 📁 uploads/
+│   │   ├── 📁 contracts/
+│   │   └── 📁 tax_reports/
+│   ├── 📁 fonts/
+│   │   └── DejaVuSans.ttf
+│   ├── server.js
+│   ├── db.js
+│   ├── package.json
+│   └── .env
+│
+├── 📁 frontend/
+│   ├── 📁 public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── 📁 src/
+│   │   ├── 📁 components/
+│   │   │   ├── Navbar.js
+│   │   │   ├── ProtectedRoute.js
+│   │   │   ├── AddRoomForm.js
+│   │   │   └── EditRoomForm.js
+│   │   ├── 📁 pages/
+│   │   │   ├── LoginPage.js
+│   │   │   ├── RegisterPage.js
+│   │   │   ├── RoomsPage.js
+│   │   │   ├── RequestFormPage.js
+│   │   │   ├── RequestsPage.js
+│   │   │   ├── AdminRequestsPage.js
+│   │   │   ├── AdminAnalyticsPage.js
+│   │   │   └── UserProfilePage.js
+│   │   ├── 📁 context/
+│   │   │   └── AuthContext.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── package.json
+│   └── package-lock.json
+│
+├── 📁 database/
+│   └── schema.sql
+
 API Endpoint
 
 Аутентификация
